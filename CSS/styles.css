@@ -1,0 +1,118 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+/* main */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.container {
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 1px 5px rgb(0, 0, 0);
+  text-align: center;
+}
+
+.waktu {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.waktu::before {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.garis-waktu {
+  margin-bottom: 20px;
+  position: relative;
+  width: calc(50% + 1px);
+  padding-right: 20px;
+}
+
+.garis-waktu .waktu-tanggal {
+  font-size: 1rem;
+  color: #d3d3d3;
+}
+
+.garis-waktu .waktu-content {
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  display: inline-block;
+}
+
+.garis-waktu:nth-child(even) {
+  left: calc(50% - 1px);
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.garis-waktu:nth-child(even) .waktu-content {
+  margin-left: 0;
+}
+
+.garis-waktu::before {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -4px;
+  background-color: black;
+  border-radius: 50%;
+  top: 10px;
+}
+
+.garis-waktu:nth-child(even)::before {
+  left: -4px;
+  right: auto;
+}
+
+.waktu-content {
+  text-align: center;
+}
+
+/* button */
+button {
+  display: inline-block;
+  background-color: black;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
